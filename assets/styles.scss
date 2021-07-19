@@ -61,3 +61,25 @@ footer{
     color: #fff;
     background: #161416;
 }
+
+@media only screen and (max-width:320px){
+    .offer{
+        .txt{
+            width: 15em;
+        }
+        .gonzo{
+            width: 17em;
+        }
+    }
+    footer{
+        .ga18{
+            width: 2em;
+        }
+        .ga{
+            width: 5em;
+        }
+        .terms{
+            font-size: .5em;
+        }
+    }
+}
