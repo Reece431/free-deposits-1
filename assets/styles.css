@@ -24,7 +24,6 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow: hidden;
 }
 
 header .logo {
@@ -56,8 +55,7 @@ header .logo {
   width: 22em;
 }
 
-footer {
-  width: 100vw;
+.terms-bar {
   margin-top: auto;
   padding: 1em .5em;
   display: -ms-grid;
@@ -71,19 +69,44 @@ footer {
   background: #161416;
 }
 
-footer .ga18 {
+.terms-bar .ga18 {
   width: 3em;
 }
 
-footer .ga {
+.terms-bar .ga {
   width: 6em;
 }
 
-footer .terms {
+.terms-bar .btn {
+  margin-bottom: 1em;
+}
+
+.terms-bar .terms {
   margin-left: 1em;
   font-size: .6em;
   text-transform: uppercase;
   line-height: 1.2em;
+}
+
+footer {
+  padding: 1em;
+  background: #CAEDFF;
+}
+
+footer h1 {
+  text-align: center;
+}
+
+footer h2 {
+  padding: 1em 0;
+}
+
+footer h1, footer h2, footer a {
+  color: #ea006f;
+}
+
+footer p {
+  padding: .5em 0;
 }
 
 @media only screen and (max-width: 320px) {
@@ -93,13 +116,13 @@ footer .terms {
   .offer .gonzo {
     width: 17em;
   }
-  footer .ga18 {
+  .terms-bar .ga18 {
     width: 2em;
   }
-  footer .ga {
+  .terms-bar .ga {
     width: 5em;
   }
-  footer .terms {
+  .terms-bar .terms {
     font-size: .5em;
   }
 }

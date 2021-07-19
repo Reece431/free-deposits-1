@@ -18,7 +18,6 @@ img{
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    overflow:hidden;
 }
 header{
     .logo{
@@ -39,8 +38,7 @@ header{
     }
 }
 
-footer{
-    width: 100vw;
+.terms-bar{
     margin-top: auto;
     padding: 1em .5em;
     display: grid;
@@ -52,6 +50,9 @@ footer{
     .ga{
         width: 6em;
     }
+    .btn{
+        margin-bottom: 1em;
+    }
     .terms{
         margin-left: 1em;
         font-size: .6em;
@@ -60,6 +61,23 @@ footer{
     }
     color: #fff;
     background: #161416;
+}
+
+footer{
+    padding: 1em;
+    background: #CAEDFF;
+    h1{
+        text-align:center;
+    }
+    h2{
+        padding: 1em 0;
+    }
+    h1,h2,a{
+        color: #ea006f;
+    }
+    p{
+        padding: .5em 0;
+    }
 }
 
 @media only screen and (max-width:320px){
@@ -71,7 +89,7 @@ footer{
             width: 17em;
         }
     }
-    footer{
+    .terms-bar{
         .ga18{
             width: 2em;
         }
