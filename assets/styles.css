@@ -46,6 +46,7 @@ header .logo {
 }
 
 .offer {
+  position: relative;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,10 +65,24 @@ header .logo {
 
 .offer .txt {
   width: 16em;
+  z-index: 3;
 }
 
 .offer .gonzo {
   width: 20em;
+  z-index: 3;
+}
+
+.offer .btn {
+  z-index: 3;
+}
+
+.offer .avater {
+  position: absolute;
+  bottom: 0;
+  left: -10em;
+  width: 28em;
+  z-index: 2;
 }
 
 @media only screen and (max-width: 320px) {

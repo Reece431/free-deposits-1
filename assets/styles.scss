@@ -45,6 +45,7 @@ header{
     }
 }
 .offer{
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -52,9 +53,21 @@ header{
     align-items: center;
     .txt{
         width: 16em;
+        z-index: 3;
     }
     .gonzo{
         width: 20em;
+        z-index: 3;
+    }
+    .btn{
+        z-index: 3;
+    }
+    .avater{
+        position: absolute;
+        bottom: 0;
+        left: -10em;
+        width: 28em;
+        z-index: 2;
     }
     @include mqMax(320px){
         .txt{
