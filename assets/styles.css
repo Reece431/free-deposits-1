@@ -11,6 +11,7 @@ img {
 }
 
 .wrap {
+  position: relative;
   height: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -24,14 +25,28 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 header .logo {
   margin-left: 1em;
-  width: 10em;
+  width: 8em;
+}
+
+@media only screen and (max-width: 360px) {
+  header .logo {
+    width: 6em;
+  }
 }
 
 .offer {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,14 +63,52 @@ header .logo {
 }
 
 .offer .txt {
-  width: 18em;
+  width: 16em;
 }
 
 .offer .gonzo {
-  width: 22em;
+  width: 20em;
+}
+
+@media only screen and (max-width: 320px) {
+  .offer .txt {
+    width: 13em;
+  }
+  .offer .gonzo {
+    width: 17em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .offer .txt {
+    width: 26em;
+  }
+  .offer .gonzo {
+    width: 30em;
+  }
+  .offer .btn {
+    width: 30em;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .offer .txt {
+    width: 13em;
+  }
+  .offer .gonzo {
+    width: 17em;
+  }
+  .offer .btn {
+    width: 17em;
+  }
 }
 
 .terms-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 999;
   margin-top: auto;
   padding: 1em .5em;
   display: -ms-grid;
@@ -82,10 +135,22 @@ header .logo {
 }
 
 .terms-bar .terms {
-  margin-left: 1em;
+  margin: 0 1em;
   font-size: .6em;
   text-transform: uppercase;
   line-height: 1.2em;
+}
+
+@media only screen and (max-width: 320px) {
+  .terms-bar .ga18 {
+    width: 2em;
+  }
+  .terms-bar .ga {
+    width: 5em;
+  }
+  .terms-bar .terms {
+    font-size: .5em;
+  }
 }
 
 footer {
@@ -97,33 +162,15 @@ footer h1 {
   text-align: center;
 }
 
-footer h2 {
-  padding: 1em 0;
-}
-
-footer h1, footer h2, footer a {
+footer h1, footer a {
   color: #ea006f;
 }
 
-footer p {
-  padding: .5em 0;
+footer ul {
+  padding: 0 .5em;
 }
 
-@media only screen and (max-width: 320px) {
-  .offer .txt {
-    width: 13em;
-  }
-  .offer .gonzo {
-    width: 17em;
-  }
-  .terms-bar .ga18 {
-    width: 2em;
-  }
-  .terms-bar .ga {
-    width: 5em;
-  }
-  .terms-bar .terms {
-    font-size: .5em;
-  }
+footer ul li {
+  padding: .5em 0;
 }
 /*# sourceMappingURL=styles.css.map */

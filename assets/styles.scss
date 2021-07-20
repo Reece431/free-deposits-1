@@ -1,3 +1,14 @@
+@mixin mqMax($size){
+    @media only screen and (max-width: $size){
+        @content
+    }
+};
+@mixin mqMin($size){
+    @media only screen and (min-width: $size){
+        @content
+    }
+};
+
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +21,7 @@ img{
 }
 
 .wrap{
+    position: relative;
     height: 100%;
     min-height: 100vh;
     display: flex;
@@ -18,27 +30,70 @@ img{
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
+    overflow: hidden;
 }
 header{
+    position: absolute;
+    top: 0;
+    left: 0;
     .logo{
         margin-left: 1em;
-        width: 10em;
+        width: 8em;
+        @include mqMax(360px){
+            width: 6em;
+        }
     }
 }
 .offer{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .txt{
-        width: 18em;
+        width: 16em;
     }
     .gonzo{
-        width: 22em;
+        width: 20em;
+    }
+    @include mqMax(320px){
+        .txt{
+            width: 13em;
+        }
+        .gonzo{
+            width: 17em;
+        }
+    }
+    @include mqMin(1024px){
+        .txt{
+            width: 26em;
+        }
+        .gonzo{
+            width: 30em;
+        }
+        .btn{
+            width: 30em;
+        }
+    }
+    @include mqMin(1025px){
+        .txt{
+            width: 13em;
+        }
+        .gonzo{
+            width: 17em;
+        }
+        .btn{
+            width: 17em;
+        }
     }
 }
 
 .terms-bar{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 999;
     margin-top: auto;
     padding: 1em .5em;
     display: grid;
@@ -54,42 +109,14 @@ header{
         margin-bottom: 1em;
     }
     .terms{
-        margin-left: 1em;
+        margin: 0 1em;
         font-size: .6em;
         text-transform: uppercase;
         line-height: 1.2em;;
     }
     color: #fff;
     background: #161416;
-}
-
-footer{
-    padding: 1em;
-    background: #CAEDFF;
-    h1{
-        text-align:center;
-    }
-    h2{
-        padding: 1em 0;
-    }
-    h1,h2,a{
-        color: #ea006f;
-    }
-    p{
-        padding: .5em 0;
-    }
-}
-
-@media only screen and (max-width:320px){
-    .offer{
-        .txt{
-            width: 13em;
-        }
-        .gonzo{
-            width: 17em;
-        }
-    }
-    .terms-bar{
+    @include mqMax(320px){
         .ga18{
             width: 2em;
         }
@@ -98,6 +125,23 @@ footer{
         }
         .terms{
             font-size: .5em;
+        }
+    }
+}
+
+footer{
+    padding: 1em;
+    background: #CAEDFF;
+    h1{
+        text-align:center;
+    }
+    h1,a{
+        color: #ea006f;
+    }
+    ul{
+        padding: 0 .5em;
+        li{
+            padding: .5em 0;
         }
     }
 }
