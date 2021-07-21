@@ -64,9 +64,10 @@ header{
     }
     .avater{
         position: absolute;
-        bottom: 0;
+        bottom: 0em;
         left: -10em;
         width: 28em;
+        transform: rotate(260deg);
         z-index: 2;
     }
     @include mqMax(320px){
